@@ -21,7 +21,6 @@ let turn;
 /*----- cached elements  -----*/
 const messageEl = document.querySelector("h1");
 const resetBtn = document.querySelector("button");
-const boxEls = Array.from(document.querySelectorAll("#board > div"));
 
 
 
@@ -44,6 +43,7 @@ function init() {
 
     winner = null;
     turn = 1;
+    document.getElementById("board").addEventListener("click", handleClick);
     
     render();
 };
